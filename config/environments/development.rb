@@ -61,6 +61,5 @@ Rails.application.configure do
   # Suppress logger output for asset requests.
   config.assets.quiet = true
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
-  config.hosts << ".amazonaws.com"
-  
+
 end

@@ -42,6 +42,3 @@ yarn-debug.log*
 /vendor/bundle
 /public/uploads
 /app/views/**/*.html.erb.tmp
-
-.DS_Store
-/vendor/bundle
