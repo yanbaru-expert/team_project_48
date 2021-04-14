@@ -1,3 +1,5 @@
+require "csv"
+
 class ImportCsv
   def self.import(path)
     list = []
