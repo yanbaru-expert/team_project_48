@@ -12,6 +12,7 @@
 
   <body>
     <header>
+    <%= render "layouts/flash" %>
       <% if user_signed_in? %>
         <!-- ログイン時 -->
         <%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: {confirm: "ログアウトしますか？"} %>
