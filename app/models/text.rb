@@ -1,5 +1,10 @@
 class Text < ApplicationRecord
-  validates :genre, :title, :content, presence: true
+  with_options presence: true do
+    validates :genre
+    validates :title
+    validates :content
+  end
+  
   enum genre: {
     invisible: 0, # 非表示
     basic: 1,

@@ -1,5 +1,10 @@
 class Movie < ApplicationRecord
-  validates :genre, :title, :url, presence: true
+  with_options presence: true do
+    validates :genre
+    validates :title
+    validates :url
+  end
+  
   enum genre: {
     invisible: 0, # 非表示
     basic: 1,
