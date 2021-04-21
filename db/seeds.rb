@@ -12,3 +12,4 @@ ImportCsv.text_data
 
 Movie.destroy_all
 ImportCsv.movie_data
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
