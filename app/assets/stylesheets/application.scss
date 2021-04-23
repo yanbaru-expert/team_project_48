@@ -30,3 +30,8 @@
 .alert-alert {
   @extend .alert-danger;
 }
+
+// ナビバー
+body {
+  padding-top: 56px;
+}
