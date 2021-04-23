@@ -1,74 +1,73 @@
 <nav class="navbar navbar-expand-sm navbar-dark bg-primary fixed-top">
-  <span class="navbar-brand">やんばるエキスパート</span>
+  <%= link_to(image_tag("yanbaru_expert_logo.png", :alt => ""), root_url, id: 'logo') %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <ul class="navbar-nav">
+      <li class="nav-item active dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Ruby
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Ruby/Railsテキスト教材</a>
+          <a class="dropdown-item" href="#">Ruby/Rails動画教材</a>
+          <a class="dropdown-item" href="#">AWSテキスト教材</a>
+          <a class="dropdown-item" href="#">よくある質問集</a>
+          <a class="dropdown-item" href="#">チャレンジ問題集</a>
+        </div>
+      </li>
+      <li class="nav-item active dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          PHP
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">PHPテキスト教材</a>
+          <a class="dropdown-item" href="#">PHP動画教材</a>
+        </div>
+      </li>
+      <li class="nav-item active dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          フロント
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">HTML＆CSS</a>
+          <a class="dropdown-item" href="#">JavaScript</a>
+          <a class="dropdown-item" href="#">TypeScript</a>
+          <a class="dropdown-item" href="#">Angular</a>
+          <a class="dropdown-item" href="#">Vue</a>
+        </div>
+      </li>
+      <li class="nav-item active dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          デザイン講座
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">デザインツールの使い方</a>
+          <a class="dropdown-item" href="#">実案件の取り方</a>
+          <a class="dropdown-item" href="#">デザイナーのマーケティング戦略</a>
+        </div>
+      </li>
+      <li class="nav-item active dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          勉強会
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">全ての勉強会</a>
+          <a class="dropdown-item" href="#">プログラミング勉強会</a>
+        </div>
+      </li>
+      <li class="nav-item active dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          マネタイズ講座
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">マーケティング講座</a>
+          <a class="dropdown-item" href="#">Lステップ講座</a>
+          <a class="dropdown-item" href="#">インスタ講座</a>
+        </div>
+      </li>
       <% if user_signed_in? %>
-        <!-- ログイン時 -->
-        <li class="nav-item active dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Ruby
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">Ruby/Railsテキスト教材</a>
-            <a class="dropdown-item" href="#">Ruby/Rails動画教材</a>
-            <a class="dropdown-item" href="#">AWSテキスト教材</a>
-            <a class="dropdown-item" href="#">よくある質問集</a>
-            <a class="dropdown-item" href="#">チャレンジ問題集</a>
-          </div>
-        </li>
-        <li class="nav-item active dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            PHP
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">PHPテキスト教材</a>
-            <a class="dropdown-item" href="#">PHP動画教材</a>
-          </div>
-        </li>
-        <li class="nav-item active dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            フロント
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">HTML＆CSS</a>
-            <a class="dropdown-item" href="#">JavaScript</a>
-            <a class="dropdown-item" href="#">TypeScript</a>
-            <a class="dropdown-item" href="#">Angular</a>
-            <a class="dropdown-item" href="#">Vue</a>
-          </div>
-        </li>
-        <li class="nav-item active dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            デザイン講座
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">デザインツールの使い方</a>
-            <a class="dropdown-item" href="#">実案件の取り方</a>
-            <a class="dropdown-item" href="#">デザイナーのマーケティング戦略</a>
-          </div>
-        </li>
-        <li class="nav-item active dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            勉強会
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">全ての勉強会</a>
-            <a class="dropdown-item" href="#">プログラミング勉強会</a>
-          </div>
-        </li>
-        <li class="nav-item active dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            マネタイズ講座
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">マーケティング講座</a>
-            <a class="dropdown-item" href="#">Lステップ講座</a>
-            <a class="dropdown-item" href="#">インスタ講座</a>
-          </div>
-        </li>
         <li class="nav-item active dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             マイページ
@@ -77,12 +76,10 @@
             <a class="dropdown-item" href="#">メモ</a>
             <a class="dropdown-item" href="#">進捗管理</a>
             <a class="dropdown-item" href="#">アカウント編集</a>
-            <a class="dropdown-item" href="#">ログアウト</a>
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: {confirm: "ログアウトしますか？"}, class: "dropdown-item" %>
           </div>
         </li>
-        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: {confirm: "ログアウトしますか？"}, class: "nav-item nav-link active" %>
       <% else %>
-        <!-- 非ログイン時 -->
         <%= link_to "ログイン", new_user_session_path, class: "nav-item nav-link active" %>
         <%= link_to "新規登録", new_user_registration_path, class: "nav-item nav-link active" %>
       <% end %>
