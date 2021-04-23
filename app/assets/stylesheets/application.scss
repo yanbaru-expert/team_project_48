@@ -31,7 +31,20 @@
   @extend .alert-danger;
 }
 
-// ナビバー
+// ヘッダー
 body {
   padding-top: 56px;
+}
+
+.base-bg-color {
+  background: linear-gradient(to right, #353ada, #5a9dfb);
+}
+
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+.header-nav {
+  font-size: 0.8rem;
+  margin: 0 auto;
 }
