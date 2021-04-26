@@ -15,9 +15,7 @@ ja:
       text: 教材
     attributes:
       user:
-        name: 名前
-        age: 年齢
-        address: 住所
+        email: Eメール
       movie:
         genre: ジャンル
         title: タイトル
