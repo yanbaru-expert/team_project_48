@@ -10,10 +10,10 @@
   </head>
   <body>
     <header class='fixed-top base-bg-color'>
-      <%= render "layouts/flash" %>
       <%= render "layouts/header" %>
     </header>
     <main>
+      <%= render "layouts/flash" %>
       <div class="base-container <%= max_width %>">
         <%= yield %>
       </div>
