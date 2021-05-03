@@ -1,2 +1,5 @@
-<h1>Texts#index</h1>
-<p>Find me in app/views/texts/index.html.erb</p>
+<h1>Ruby/Railsテキスト教材</h1>
+<% @rails_texts.each do |text| %>
+  <%= text.genre %>
+  <%= text.content %>
+<% end %>
