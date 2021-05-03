@@ -1,5 +1,1 @@
-<h1>Ruby/Railsテキスト教材</h1>
-<% @rails_texts.each do |text| %>
-  <%= text.genre %>
-  <%= text.content %>
-<% end %>
+<%= render 'texts/rails', rails: @rails %>

@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  <div class="contents-title text-center">
+    <h1>Ruby/Rails テキスト教材</h1>
+  </div>
+  <div class="row">
+    <% @rails_texts.each.with_index(1) do |text, i| %>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card border-dark mb-3">
+          <div class="card-header p-0">
+            <div class="embed-responsive embed-responsive-16by9">
+            </div>
+          </div>
+          <div class="card-body text-dark text-body">
+            <p class="card-text text-title">
+              <%= text.title %>
+              <p>【<%= text.genre %>】</p>
+            </p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
