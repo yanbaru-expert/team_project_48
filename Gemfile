@@ -14,6 +14,8 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'devise'
 gem 'rails-i18n', '~> 6.0'
 gem 'devise-i18n'
+gem 'enum_help'
+gem 'activeadmin'
 gem 'devise-bootstrap-views'
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
