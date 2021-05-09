@@ -3,7 +3,7 @@
  *= require_self
  */
 
-@import "bootstrap/scss/bootstrap";
+@import 'bootstrap/scss/bootstrap';
 
 .base-container {
   margin: 0 auto;
@@ -46,5 +46,17 @@ body {
 
 .header-nav {
   font-size: 0.8rem;
+  margin: 0 auto;
+}
+
+// テキスト教材一覧ページ
+.text-card-container {
+  padding-left: 9px;
+  padding-right: 9px;
+  margin-bottom: 50px;
+}
+.content-card {
+  height: 370px;
+  max-width: 376px;
   margin: 0 auto;
 }
