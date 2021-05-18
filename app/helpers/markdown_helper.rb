@@ -19,7 +19,7 @@ module MarkdownHelper
       autolink: true,
       space_after_headers: true,
       no_intra_emphasis: true,
-      fanced_code_blocks: true,
+      fenced_code_blocks: true,
       tables: true,
       hard_wrap: true,
       xhtml: true,
