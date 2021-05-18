@@ -24,7 +24,7 @@ module MarkdownHelper
       hard_wrap: true,
       xhtml: true,
       lax_html_blocks: true,
-      strikethrough: true,
+      strikethrough: true
     }
   end
 end
