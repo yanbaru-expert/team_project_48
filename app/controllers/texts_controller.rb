@@ -3,7 +3,7 @@ class TextsController < ApplicationController
     @texts = Text.where(genre: ["basic", "git", "ruby", "rails"])
   end
 
-   def show
+  def show
     @text = Text.find(params[:id])
   end
 end
