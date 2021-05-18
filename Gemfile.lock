@@ -253,6 +253,7 @@ DEPENDENCIES
   activeadmin
   bootsnap (>= 1.4.4)
   byebug
+  coderay
   devise
   devise-i18n
   enum_help
