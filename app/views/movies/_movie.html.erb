@@ -16,5 +16,12 @@
         </div>
       </div>
     <% end %>
+    <p>
+      <% if @movie.watched_by?(current_user) %>
+        視聴済み
+      <% else %>
+        視聴済みにする
+      <% end %>
+    </p>
   </div>
 </div>

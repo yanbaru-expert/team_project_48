@@ -71,10 +71,14 @@ ActiveRecord::Schema.define(version: 2021_05_26_151149) do
 
   create_table "watches", force: :cascade do |t|
     t.bigint "user_id", null: false
+    t.bigint "movie_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["movie_id"], name: "index_watches_on_movie_id"
+    t.index ["user_id", "movie_id"], name: "index_watches_on_user_id_and_movie_id", unique: true
     t.index ["user_id"], name: "index_watches_on_user_id"
   end
 
+  add_foreign_key "watches", "movies"
   add_foreign_key "watches", "users"
 end
