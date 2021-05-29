@@ -17,6 +17,9 @@ gem 'devise-i18n'
 gem 'enum_help'
 gem 'activeadmin'
 gem 'devise-bootstrap-views'
+gem 'coderay'
+gem 'redcarpet'
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'pry-byebug'
