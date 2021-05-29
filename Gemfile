@@ -16,6 +16,7 @@ gem 'rails-i18n', '~> 6.0'
 gem 'devise-i18n'
 gem 'enum_help'
 gem 'activeadmin'
+gem 'devise-bootstrap-views'
 gem 'coderay'
 gem 'redcarpet'
 
