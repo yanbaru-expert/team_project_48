@@ -1,4 +1,13 @@
 class Movie < ApplicationRecord
+  belongs_to :user
+  has_many :watches, dependent: :destroy
+  
+  has_many :wacthed_users, through: :watches, source: :user
+  #movieをuserが視聴済みにしている時はtrue,していない時はfalse
+  def watched_by?(user)
+    watches.exists?(user_id: user.id)
+  end
+  
   with_options presence: true do
     validates :genre
     validates :title

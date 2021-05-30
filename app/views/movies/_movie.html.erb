@@ -9,6 +9,13 @@
             </div>
           </div>
           <div class="card-body text-dark movie-body">
+            <p>
+              <% if movie.watched_by?(current_user) %>
+                <%= link_to "視聴済みにする", movie_watches_path(movie), method: :delete %>
+              <% else %>
+                <%= link_to "視聴済みを解除", movie_watches_path(movie), method: :post %>
+              <% end %>
+            </p>
             <p class="card-text movie-title">
                 Lv.<%= i %>:<%= movie.title %>
             </p>
@@ -16,12 +23,5 @@
         </div>
       </div>
     <% end %>
-    <p>
-      <% if @movie.watched_by?(current_user) %>
-        視聴済み
-      <% else %>
-        視聴済みにする
-      <% end %>
-    </p>
   </div>
 </div>
