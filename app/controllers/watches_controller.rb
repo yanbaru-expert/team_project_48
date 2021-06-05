@@ -6,7 +6,7 @@ class WatchesController < ApplicationController
   end
   
   def destroy
-    current_user.watches.find_by(movie_id: @movieid).destroy!
+    current_user.watches.find_by(movie_id: @movie.id).destroy!
   end
   
   private
