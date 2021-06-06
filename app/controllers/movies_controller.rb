@@ -1,8 +1,8 @@
 class MoviesController < ApplicationController
-  # 1ページに表示される動画教材を定義
-  per = 8
-
+  
   def index
+    # 1ページに表示される動画教材を定義
+    per = 8
     # @movies = Movie.where(genre: ["basic", "git", "ruby", "rails"]).order(id: :asc).page(params[:page]).per(PER)
     @movies = Movie.recent(per)
     page_num = @movies.current_page
