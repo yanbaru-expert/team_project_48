@@ -1,5 +1,5 @@
 class WatchesController < ApplicationController
-  before_action :set_message
+  before_action :set_movie
   
   def create
     current_user.watches.create!(movie_id: @movie.id)
@@ -11,7 +11,7 @@ class WatchesController < ApplicationController
   
   private
   
-  def set_message
+  def set_movie
     @movie = Movie.find(params[:movie_id])
   end
 end
