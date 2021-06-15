@@ -1,17 +1,17 @@
 class Movie < ApplicationRecord
-  belongs_to :user
+  # belongs_to :user
   has_many :watches, dependent: :destroy
   
   has_many :watched_users, through: :watches, source: :user
-  #movieをuserが視聴済みにしている時はtrue,していない時はfalse
-  def watched_by?(user)
-    watches.any?{ |watch| watch.user_id == user.id }
-  end
   
   with_options presence: true do
     validates :genre
     validates :title
     validates :url
+  end
+  #movieをuserが視聴済みにしている時はtrue,していない時はfalse
+  def watched_by?(user)
+    watches.any?{ |watch| watch.user_id == user.id }
   end
   
   enum genre: {
