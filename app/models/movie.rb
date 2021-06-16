@@ -1,5 +1,4 @@
 class Movie < ApplicationRecord
-  # belongs_to :user
   has_many :watches, dependent: :destroy
   
   has_many :watched_users, through: :watches, source: :user
