@@ -1,8 +1,16 @@
 class Movie < ApplicationRecord
+  has_many :watches, dependent: :destroy
+  
+  has_many :watched_users, through: :watches, source: :user
+  
   with_options presence: true do
     validates :genre
     validates :title
     validates :url
+  end
+  #movieをuserが視聴済みにしている時はtrue,していない時はfalse
+  def watched_by?(user)
+    watches.any?{ |watch| watch.user_id == user.id }
   end
   
   enum genre: {
@@ -23,4 +31,5 @@ class Movie < ApplicationRecord
     talk: 14, # 全ての勉強会
     live: 15, # 勉強会
   }
+  scope :recent, -> { where(genre: ["basic", "git", "ruby", "rails"]).order(id: :asc) }
 end
