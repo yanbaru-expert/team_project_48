@@ -1,8 +1,13 @@
 class Text < ApplicationRecord
+  has_many :reads, dependent: :destroy
   with_options presence: true do
     validates :genre
     validates :title
     validates :content
+  end
+
+  def read_by?(user)
+    reads.find_by(user_id: user.id).present?
   end
   
   enum genre: {
