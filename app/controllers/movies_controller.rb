@@ -4,7 +4,7 @@ class MoviesController < ApplicationController
 
   def index
     @q = Movie.ransack(params[:q])
-    @movies = @q.result.where(genre: ["basic", "git", "ruby", "rails"]).includes(:watches).order(id: :asc).recent.page(params[:page]).per(PER)
+    @movies = @q.result.recent.page(params[:page]).per(PER)
     page_num = @movies.current_page
     @base_level = (page_num - 1) * PER
   end
