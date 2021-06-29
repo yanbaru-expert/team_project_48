@@ -7,8 +7,10 @@ Rails.application.routes.draw do
   }
   root "texts#index"
   resources :texts
-  resources :movies
   devise_scope :user do
     post "users/guest_sign_in", to: "users/sessions#guest_sign_in"
+  end
+  resources :movies do
+    resource :watches, only: [:create, :destroy]
   end
 end
