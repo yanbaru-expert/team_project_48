@@ -1,11 +1,8 @@
 class MoviesController < ApplicationController
-  # 1ページに表示される動画教材を定義
-  PER = 8
-
   def index
     @q = Movie.ransack(params[:q])
-    @movies = @q.result.recent.page(params[:page]).per(PER)
+    @movies = @q.result.recent.page(params[:page]).per(Movie::PER)
     page_num = @movies.current_page
-    @base_level = (page_num - 1) * PER
+    @base_level = (page_num - 1) * Movie::PER
   end
 end

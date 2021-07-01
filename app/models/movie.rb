@@ -1,6 +1,5 @@
 class Movie < ApplicationRecord
   has_many :watches, dependent: :destroy
-  
   has_many :watched_users, through: :watches, source: :user
   
   with_options presence: true do
@@ -31,5 +30,9 @@ class Movie < ApplicationRecord
     talk: 14, # 全ての勉強会
     live: 15, # 勉強会
   }
-  scope :recent, -> { where(genre: ["basic", "git", "ruby", "rails"]).includes(:watches).order(id: :asc) }
+  scope :active, -> { where(genre: ["basic", "git", "ruby", "rails"]).order(id: :asc) }
+  scope :include, -> { includes(:watches) }
+  scope :recent, -> { active.include }
+  # 1ページに表示される動画教材を定義
+  PER = 8
 end
