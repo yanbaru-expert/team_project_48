@@ -7,7 +7,6 @@ class Text < ApplicationRecord
   end
 
   def read_by?(user)
-    reads.find_by(user_id: user.id).present?
     reads.any?{ |read| read.user_id == user.id }
   end
   
