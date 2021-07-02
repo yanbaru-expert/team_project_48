@@ -9,8 +9,10 @@ class ReadsController < ApplicationController
     current_user.reads.find_by(text_id: @text.id).destroy!
   end
 
+  private
+
   def set_text
     @text = Text.find(params[:text_id])
   end
-  
+
 end
