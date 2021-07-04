@@ -1,4 +1,6 @@
 class Movie < ApplicationRecord
+  # 1ページに表示される動画教材を定義
+  PER = 8
   has_many :watches, dependent: :destroy
   has_many :watched_users, through: :watches, source: :user
   
@@ -7,7 +9,7 @@ class Movie < ApplicationRecord
     validates :title
     validates :url
   end
-  #movieをuserが視聴済みにしている時はtrue,していない時はfalse
+  #movieをuserが視聴済みにしている時はtrue,していcdない時はfalse
   def watched_by?(user)
     watches.any?{ |watch| watch.user_id == user.id }
   end
@@ -33,6 +35,4 @@ class Movie < ApplicationRecord
   scope :active, -> { where(genre: ["basic", "git", "ruby", "rails"]).order(id: :asc) }
   scope :include, -> { includes(:watches) }
   scope :recent, -> { active.include }
-  # 1ページに表示される動画教材を定義
-  PER = 8
 end
