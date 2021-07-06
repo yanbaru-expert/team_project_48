@@ -1,6 +1,7 @@
 class Movie < ApplicationRecord
+  # 1ページに表示される動画教材を定義
+  PER = 8
   has_many :watches, dependent: :destroy
-  
   has_many :watched_users, through: :watches, source: :user
   
   with_options presence: true do
