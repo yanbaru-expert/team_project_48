@@ -9,6 +9,9 @@ class Text < ApplicationRecord
   def read_by?(user)
     reads.any?{ |read| read.user_id == user.id }
   end
+
+  scope :active, -> { where(genre: ["basic", "git", "ruby", "rails"]) }
+  scope :text_include, -> { includes(:reads)}
   
   enum genre: {
     invisible: 0, # 非表示

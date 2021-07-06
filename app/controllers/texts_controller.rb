@@ -1,6 +1,7 @@
 class TextsController < ApplicationController
   def index
-    @texts = Text.where(genre: ["basic", "git", "ruby", "rails"]).includes(:reads)
+    @texts = Text.active
+    @texts = Text.text_include
   end
 
   def show
