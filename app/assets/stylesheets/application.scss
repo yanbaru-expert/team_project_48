@@ -53,6 +53,21 @@ body {
 .header-nav {
   font-size: 0.8rem;
   margin: 0 auto;
+  word-break: keep-all;
+}
+
+// フッター
+
+footer {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a {
+    padding: 0 20px;
+    font-size: 20px;
+  }
 }
 
 // テキスト教材一覧ページ
@@ -70,4 +85,9 @@ body {
 // 共通
 a:hover {
   text-decoration: none;
+}
+
+// 動画教材一覧ページのページネーション
+.pagination {
+  justify-content: center;
 }
