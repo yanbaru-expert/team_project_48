@@ -9,7 +9,7 @@ class Movie < ApplicationRecord
     validates :title
     validates :url
   end
-  #movieをuserが視聴済みにしている時はtrue,していcdない時はfalse
+  #movieをuserが視聴済みにしている時はtrue,していない時はfalse
   def watched_by?(user)
     watches.any?{ |watch| watch.user_id == user.id }
   end
