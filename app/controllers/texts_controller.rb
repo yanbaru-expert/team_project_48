@@ -1,6 +1,6 @@
 class TextsController < ApplicationController
   def index
-    @texts = Text.text_show.includes(:reads)
+    @texts = Text.recent.includes(:reads)
   end
 
   def show
