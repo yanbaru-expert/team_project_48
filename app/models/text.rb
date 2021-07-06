@@ -10,7 +10,7 @@ class Text < ApplicationRecord
     reads.any?{ |read| read.user_id == user.id }
   end
 
-  scope :active, -> { where(genre: ["basic", "git", "ruby", "rails"]) }
+  scope :text_show, -> { where(genre: ["basic", "git", "ruby", "rails"]) }
   
   enum genre: {
     invisible: 0, # 非表示
