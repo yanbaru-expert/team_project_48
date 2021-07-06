@@ -1,20 +1,22 @@
-<div class="contents-title text-center">
-  <h3>Ruby/Rails 動画</h3>
-</div>
-<form class="form-inline justify-content-center">
-    <%= search_form_for @q do |f| %>
-      <div class="col-2.5 align-self-center">
-        <div class="form-group mx-sm-3 mb-2">
-          <%= f.search_field :title_cont, class: "form-control", placeholder: "🔍教材を探す" %>
-        </div>
-      </div>
-      <div class="col-2">
-        <%= f.submit "検索", class: "btn btn-primary mb-2" %>
-        <%= link_to "戻る", :back, class: "btn btn-secondary mb-2" %>
-      </div>
-    <% end %>
+<div class="base-container mw-xl">
+  <div class="contents-title text-center">
+    <h3>Ruby/Rails 動画</h3>
   </div>
-</form>
-<hr>
-<%= render 'movies/movie', movie: @movie %>
-<%= paginate @movies %>
+  <form class="form-inline justify-content-center">
+      <%= search_form_for @q do |f| %>
+        <div class="col-2.5 align-self-center">
+          <div class="form-group mx-sm-3 mb-2">
+            <%= f.search_field :title_cont, class: "form-control", placeholder: "🔍教材を探す" %>
+          </div>
+        </div>
+        <div class="col-2">
+          <%= f.submit "検索", class: "btn btn-primary mb-2" %>
+          <%= link_to "戻る", :back, class: "btn btn-secondary mb-2" %>
+        </div>
+      <% end %>
+    </div>
+  </form>
+  <hr>
+  <%= render 'movies/movie', movie: @movie %>
+  <%= paginate @movies %>
+</div>
