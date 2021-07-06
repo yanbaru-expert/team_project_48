@@ -11,7 +11,6 @@ class Text < ApplicationRecord
   end
 
   scope :active, -> { where(genre: ["basic", "git", "ruby", "rails"]) }
-  scope :text_include, -> { includes(:reads)}
   
   enum genre: {
     invisible: 0, # 非表示
