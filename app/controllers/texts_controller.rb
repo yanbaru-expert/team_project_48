@@ -1,6 +1,6 @@
 class TextsController < ApplicationController
   def index
-    @texts = Text.active.includes(:reads)
+    @texts = Text.text_show.includes(:reads)
   end
 
   def show
