@@ -1,0 +1,106 @@
+// トップページ
+
+.top {
+  font-family: 'M PLUS 1p', sans-serif;
+  color: #16325c;
+  .top_message {
+    width: 100%;
+    text-align: center;
+    // background-image: image-url('header.png');
+    background-image: image-url('agg.jpeg');
+    background-size: cover;
+    height: 500px;
+    h1 {
+      font-size: 50px;
+      font-weight: bold;
+      color: #fff;
+      letter-spacing: 3px;
+      padding-top: 100px;
+    }
+    h2 {
+      font-size: 40px;
+      font-weight: bold;
+      color: #fff;
+      letter-spacing: 3px;
+      margin-top: 30px;
+    }
+  }
+  .top_guestlogin {
+    text-align: center;
+    margin: 80px 0;
+    .top_guestlogin_btn {
+      background-color: #F2AC57;
+      color: #fff;
+      font-size: 18px;
+      padding: 20px 30px;
+      border-radius: 10px;
+      &:hover {
+        background-color: #fff;
+        color: #f2ac57;
+        border: 2px solid #F2AC57;
+      }
+    }
+  }
+  .top_member {
+    .top_member_title {
+      text-align: center;
+      margin: 50px 0 30px;
+      letter-spacing: 3px;
+    }
+    .top_member_content {
+      flex-wrap: wrap;
+      display: flex;
+      .top_member_content_card {
+        width: calc((100% - 90px) / 2);
+        border-radius: 10px;
+        background-color: #FFFEF0;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+        margin: 20px;
+        padding: 40px 20px;
+        text-align: center;
+        .top_member_content_card_information {
+          text-align: center;
+          .top_member_content_card_information_img {
+            margin: 30px 0;
+            img {
+              width: 100px;
+              transition-duration: 1.0s;
+              &:hover {
+              transform:scale(1.2,1.2);
+              transition-duration: 1.0s;
+              }
+            }
+          }
+          .top_member_content_card_information_name {
+
+          }
+        }
+        .top_member_content_card_link {
+          text-align: center;
+          img {
+            width: 50px;
+            margin: 40px 30px;
+          }
+          .top_member_content_card_link_hover {
+            &:hover {
+              opacity: 0.5;
+            }
+          }
+        }
+      }
+    }
+  }
+  .top_source {
+    text-align: center;
+    letter-spacing: 3px;
+    margin: 150px 0 200px;
+    .top_source_link {
+      font-size: 20px;
+    }
+  }
+  .fa-brown {
+      color: #732002;
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+}
