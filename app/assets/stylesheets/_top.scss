@@ -6,8 +6,7 @@
   .top_message {
     width: 100%;
     text-align: center;
-    // background-image: image-url('header.png');
-    background-image: image-url('agg.jpeg');
+    background-image: image-url('top_header.jpeg');
     background-size: cover;
     height: 500px;
     h1 {
@@ -99,11 +98,20 @@
     }
   }
   .top_source {
-    text-align: center;
-    letter-spacing: 3px;
     margin: 150px 0 200px;
-    .top_source_link {
+    .top_source_title {
+      text-align: center;
+      letter-spacing: 3px;
+    }
+    .top_source_content {
+      text-align: center;
+      .top_source_link {
       font-size: 20px;
+      }
+    }
+    .fa-git {
+      font-size: 20px;
+      margin-right: 10px;
     }
   }
   .fa-brown {
@@ -112,3 +120,5 @@
       margin-bottom: 30px;
     }
 }
+
+
