@@ -6,7 +6,6 @@ Rails.application.routes.draw do
     passwords: "users/passwords"
   }
   root "pages#top"
-  resources :texts
   resources :texts do
     resource :reads, only: [:create, :destroy]
   end
