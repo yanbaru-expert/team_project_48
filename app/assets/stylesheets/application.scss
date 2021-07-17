@@ -1,29 +1,14 @@
-/* 
- *= require_self
- *= require_tree .
- */
 
- //  Media Queries
-$breakpoints: (
-  'sm': 'screen and (max-width: 400px)',
-  'md': 'screen and (max-width: 768px)',
-  'lg': 'screen and (max-width: 1000px)',
-  'xl': 'screen and (max-width: 1200px)',
-) !default;
-
-@mixin mq($breakpoint: md) {
-  @media #{map-get($breakpoints, $breakpoint)} {
-    @content;
-  }
-}
-
-@import 'bootstrap/scss/bootstrap';
+//  Media Queries
+@import 'mixin';
 
 // トップページ
-// @import 'top';
+@import 'top';
 
 // Google Fonts
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300&display=swap');
+
+@import 'bootstrap/scss/bootstrap';
 
 .container-login {
   @extend .container-fluid;
