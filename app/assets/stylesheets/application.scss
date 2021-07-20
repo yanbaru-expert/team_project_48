@@ -1,9 +1,7 @@
-
-//  Media Queries
-@import 'mixin';
-
-// トップページ
-@import 'top';
+/*
+ *= require_self
+ *= require_tree . 
+ */
 
 // Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300&display=swap');
