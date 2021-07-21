@@ -5,7 +5,7 @@ $(function () {
   // ボタン非表示
   pagetop.hide();
   // 100px スクロールしたらボタン表示
-  $(window).scroll(function () {
+  $(window).on('scroll', function () {
     if ($(this).scrollTop() > 100) {
       pagetop.fadeIn();
     } else {
