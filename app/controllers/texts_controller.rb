@@ -1,7 +1,8 @@
 class TextsController < ApplicationController
 
   def index
-    @texts = Text.recent.includes(:reads).page(params[:page]).per(9)
+    @texts = Text.recent.includes(:reads).page(params[:page]).per(Text::PER)
+  
   end
 
   def show
