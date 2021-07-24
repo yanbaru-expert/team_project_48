@@ -1,6 +1,6 @@
 
 // トップへ戻るボタンの実装
-$(function () {
+$(document).on('turbolinks:load', function () {
   var pagetop = $('#page_top');
   // ボタン非表示
   pagetop.hide();
