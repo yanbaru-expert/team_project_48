@@ -62,9 +62,13 @@ body {
 }
 
 .header-nav {
-  font-size: 0.8rem;
+  font-size: 1.0rem;
   margin: 0 auto;
   word-break: keep-all;
+}
+
+.nav-item {
+  margin: 0 8px;
 }
 
 // フッター
