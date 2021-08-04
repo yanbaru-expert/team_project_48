@@ -1,0 +1,116 @@
+<div class="top">
+
+  <div class="top_message">
+    <h1>Team Portfolio</h1>
+    <h2>- 4人の共同開発アプリ -</h2>
+  </div>
+  <div class="top_guestlogin">
+    <% if user_signed_in? %>
+    <% else %>
+      <%= link_to "ゲストログイン（閲覧用）", users_guest_sign_in_path, method: :post, class: "top_guestlogin_btn" %>
+    <% end %>
+  </div>
+  <div class="top_member">
+    <div class="top_member_title">
+      <i class="fas fa-users fa_brown"></i>
+      <h2>- MEMBER -</h2>
+    </div>
+    <div class="top_member_content">
+
+      <div class="top_member_content_card">
+        <div class="top_member_content_card_information">
+          <div class="top_member_content_card_information_img">
+            <%= image_tag 'takayanagi.jpg' %>
+          </div>
+          <div class="top_member_content_card_information_name">
+            <h2>高柳　猛</h2>
+          </div>
+        </div>
+        <div class="top_member_content_card_link">
+          <%= link_to 'https://github.com/takayanagi-takesi', class:"top_member_content_card_link_hover", target: :_blank do %>
+            <%= image_tag 'github_logo.png' %>
+          <% end %>
+          <%= link_to 'https://twitter.com/ta57510167', class:"top_member_content_card_link_hover", target: :_blank do %>
+            <%= image_tag 'twitter_logo.png' %>
+          <% end %>
+        </div>
+      </div>
+      
+      <div class="top_member_content_card">
+        <div class="top_member_content_card_information">
+          <div class="top_member_content_card_information_img">
+            <%= image_tag 'naotsugu.jpg' %>
+          </div>
+          <div class="top_member_content_card_information_name">
+            <h2>naotsugu.k</h2>
+          </div>
+        </div>
+        <div class="top_member_content_card_link">
+          <%= link_to 'https://github.com/naotsugukaneko', class:"top_member_content_card_link_hover", target: :_blank do %>
+            <%= image_tag 'github_logo.png' %>
+          <% end %>
+          <%= link_to 'https://twitter.com/naotsuguu_k', class:"top_member_content_card_link_hover", target: :_blank do %>
+            <%= image_tag 'twitter_logo.png' %>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="top_member_content_card">
+        <div class="top_member_content_card_information">
+          <div class="top_member_content_card_information_img miho">
+            <%= image_tag 'miho.jpg' %>
+          </div>
+          <div class="top_member_content_card_information_name">
+            <h2>みほ</h2>
+          </div>
+        </div>
+        <div class="top_member_content_card_link">
+          <%= link_to 'https://github.com/mihomatsui', class:"top_member_content_card_link_hover", target: :_blank do %>
+            <%= image_tag 'github_logo.png' %>
+          <% end %>
+          <%= link_to 'https://twitter.com/mihooo_24', class:"top_member_content_card_link_hover", target: :_blank do %>
+            <%= image_tag 'twitter_logo.png' %>
+          <% end %>
+          <%= link_to 'https://qiita.com/mihooo24',class:"top_member_content_card_link_hover", target: :_blank do %>
+            <%= image_tag 'qiita_logo.png' %>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="top_member_content_card">
+        <div class="top_member_content_card_information">
+          <div class="top_member_content_card_information_img">
+            <%= image_tag 'uki.jpg' %>
+          </div>
+          <div class="top_member_content_card_information_name">
+            <h2>うっき</h2>
+          </div>
+        </div>
+        <div class="top_member_content_card_link">
+          <%= link_to 'https://github.com/itstoasted-0', class:"top_member_content_card_link_hover", target: :_blank do %>
+            <%= image_tag 'github_logo.png' %>
+          <% end %>
+          <%= link_to 'https://twitter.com/itstoast_one', class:"top_member_content_card_link_hover", target: :_blank do %>
+            <%= image_tag 'twitter_logo.png' %>
+          <% end %>
+          <%= link_to 'https://www.wantedly.com/id/uki',class:"top_member_content_card_link_hover", target: :_blank do %>
+            <%= image_tag 'wantedly_logo.png' %>
+          <% end %>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+  <div class="top_source">
+    <div class="top_source_title">
+      <i class="fas fa-code fa_brown"></i>
+      <h2>- SOURCE CODE -</h2>
+    </div>
+    <div class="top_source_content">
+      <i class="fab fa-github fa_git"></i><%= link_to "GitHub", "https://github.com/yanbaru-expert/team_project_48", class:"top_source_link", target: :_blank %>
+    </div>
+  </div>
+  
+</div>
