@@ -1,7 +1,18 @@
-/* 
- *= require_tree .
+/*
  *= require_self
+ *= require_tree . 
  */
+
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300&display=swap');
+
+// FontAweome
+$fa-font-path: '@fortawesome/fontawesome-free/webfonts';
+@import '@fortawesome/fontawesome-free/scss/fontawesome';
+@import '@fortawesome/fontawesome-free/scss/regular';
+@import '@fortawesome/fontawesome-free/scss/solid';
+@import '@fortawesome/fontawesome-free/scss/brands';
+
 
 @import 'bootstrap/scss/bootstrap';
 
@@ -39,11 +50,11 @@
 
 // ヘッダー
 body {
-  padding-top: 51px;
+  padding-top: 70px;
 }
 
 .base-bg-color {
-  background: linear-gradient(to right, #353ada, #5a9dfb);
+  background-color: #fff;
 }
 
 .navbar-collapse {
@@ -51,9 +62,13 @@ body {
 }
 
 .header-nav {
-  font-size: 0.8rem;
+  font-size: 1.0rem;
   margin: 0 auto;
   word-break: keep-all;
+}
+
+.nav-item {
+  margin: 0 8px;
 }
 
 // フッター
@@ -82,9 +97,14 @@ footer {
   margin: 0 auto;
 }
 
+
 // 共通
 a:hover {
   text-decoration: none;
+}
+
+.link {
+  color: #16325c;
 }
 
 // 動画教材一覧ページのページネーション

@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     registrations: "users/registrations",
     passwords: "users/passwords"
   }
-  root "texts#index"
+  root "pages#top"
   resources :texts do
     resource :reads, only: [:create, :destroy]
   end
