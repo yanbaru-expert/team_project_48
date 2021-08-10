@@ -10,4 +10,4 @@ Turbolinks.start()
 ActiveStorage.start()
 
 require ('jquery')
-require('custom.js')
+require('pagetop_button.js')
