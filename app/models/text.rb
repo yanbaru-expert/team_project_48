@@ -11,7 +11,7 @@ class Text < ApplicationRecord
   end
 
   scope :recent, -> { where(genre: ["basic", "git", "ruby", "rails"]) }
-  
+
   enum genre: {
     invisible: 0, # 非表示
     basic: 1,
