@@ -1,4 +1,6 @@
 class Text < ApplicationRecord
+
+  PER = 9 
   has_many :reads, dependent: :destroy
   with_options presence: true do
     validates :genre
