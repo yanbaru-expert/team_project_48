@@ -30,4 +30,6 @@ class Text < ApplicationRecord
     talk: 14, # 全ての勉強会
     live: 15, # 勉強会
   }
+
+  scope :recent, -> { where(genre: ["basic", "git", "ruby", "rails"]).order(id: :asc) }
 end
