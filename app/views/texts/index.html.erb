@@ -1,6 +1,25 @@
 <% provide(:title, "テキスト")%>
-<div class="contents-title text-center">
-  <h3>Ruby/Rails テキスト</h3>
+<div class="base-container mw-xl">
+  <div class="contents-title text-center">
+    <h3>Ruby/Rails テキスト</h3>
+  </div>
+  <form class="form-inline justify-content-center">
+      <%= search_form_for @q do |f| %>
+        <div class="col-2.5 align-self-center">
+          <div class="form-group mx-sm-3 mb-2">
+            <%= f.search_field :title_cont, class: "form-control fa_search", placeholder: "\uf002 教材を探す" %>
+          </div>
+        </div>
+        <table>
+          <tr>
+            <td><%= f.submit "検索", class: "btn btn-primary mb-2" %></td>
+            <td><%= link_to "戻る", :back, class: "btn btn-secondary mb-2" %></td>
+          </tr>
+        </table>
+      <% end %>
+    </form>
+    <hr>
+    <%= render 'texts/text', text: @text %>
+    <%= paginate @texts %>
+>>>>>>> develop
 </div>
-<%= render 'texts/text', text: @text %>
-<%= paginate @texts %>
