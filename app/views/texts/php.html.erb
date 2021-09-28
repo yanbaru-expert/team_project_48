@@ -6,22 +6,13 @@
     <% @phps.each.with_index(1) do |php| %>
       <div class="col-12 col-md-6 col-lg-4 text-card-container">
         <div class="card content-card border-dark mb-3">
-          <%= link_to texts_php_path(php), class:"abc" do %>
-            <div class="card-header p-0">
-              <img class="card-img-top img-fluid" src="https://d5izmuz0mcjzz.cloudfront.net/texts/no_image.jpg">
-            </div>
-            <div class="card-body text-dark text-card-body">
-              <p id="php-<%= php.id %>">
-              <!--<% if php.read_by?(current_user) %>-->
-              <!--  <%= render "read", php: php.id %>-->
-              <!--<% else %>-->
-              <!--  <%= render "not_read", php: php.id %>-->
-              <!--<% end %>-->
-              </p>
-              <p class="card-text text-title"><%= php.title %></p>
-              <p>【<%= php.genre_i18n %>】</p>
-            </div>
-          <% end %>
+          <div class="card-header p-0">
+            <img class="card-img-top img-fluid" src="https://d5izmuz0mcjzz.cloudfront.net/texts/no_image.jpg">
+          </div>
+          <div class="card-body text-dark text-card-body">
+            <p class="card-text text-title"><%= php.title %></p>
+            <p>【<%= php.genre_i18n %>】</p>
+          </div>
         </div>
       </div>
     <% end %>

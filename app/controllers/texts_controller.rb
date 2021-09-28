@@ -13,8 +13,4 @@ class TextsController < ApplicationController
     @text = Text.find(params[:id])
   end
   
-  def php_show
-    @php = Text.find(params[:id])
-  end
-  
 end

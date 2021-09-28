@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   }
   root "pages#top"
   get '/texts/php', to: 'texts#php'
-  get '/texts/php/:id', to: 'texts#php_show'
   resources :texts do
     resource :reads, only: [:create, :destroy]
   end
