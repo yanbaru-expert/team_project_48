@@ -29,7 +29,7 @@
             マイページ
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">アカウント編集</a>
+            <%= link_to "アカウント編集", edit_user_registration_path, class: "dropdown-item" %>
             <%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: {confirm: "ログアウトしますか？"}, class: "dropdown-item" %>
           </div>
         </li>
