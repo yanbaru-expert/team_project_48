@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(version: 2021_06_21_224839) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["text_id"], name: "index_reads_on_text_id"
+    t.index ["user_id", "text_id"], name: "index_reads_on_user_id_and_text_id", unique: true
     t.index ["user_id"], name: "index_reads_on_user_id"
   end
 
