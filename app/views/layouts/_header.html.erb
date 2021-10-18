@@ -20,14 +20,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="/texts/php">PHPテキスト教材</a>
-          <a class="dropdown-item" href="#">PHP動画教材</a>
         </div>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="#">HTML&CSS</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="#">AWS</a>
       </li>
       <% if user_signed_in? %>
         <li class="nav-item active dropdown">
@@ -35,9 +28,7 @@
             マイページ
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">メモ</a>
-            <a class="dropdown-item" href="#">進捗管理</a>
-            <a class="dropdown-item" href="#">アカウント編集</a>
+            <%= link_to "アカウント編集", edit_user_registration_path, class: "dropdown-item" %>
             <%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: {confirm: "ログアウトしますか？"}, class: "dropdown-item" %>
           </div>
         </li>

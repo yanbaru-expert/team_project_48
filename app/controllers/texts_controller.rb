@@ -8,6 +8,10 @@ class TextsController < ApplicationController
  def php
     @phps = Text.where(genre: ["php"]).includes(:reads)
  end
+
+  def php_show
+    @php = Text.find(params[:id])
+  end
  
   def show
     @text = Text.find(params[:id])

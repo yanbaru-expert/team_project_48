@@ -1,3 +1,4 @@
+<% provide(:title, "テキスト")%>
 <div class="contents-title text-center">
   <h3>PHP テキスト</h3>
 </div>
@@ -6,13 +7,15 @@
     <% @phps.each.with_index(1) do |php| %>
       <div class="col-12 col-md-6 col-lg-4 text-card-container">
         <div class="card content-card border-dark mb-3">
-          <div class="card-header p-0">
-            <img class="card-img-top img-fluid" src="https://d5izmuz0mcjzz.cloudfront.net/texts/no_image.jpg">
-          </div>
-          <div class="card-body text-dark text-card-body">
-            <p class="card-text text-title"><%= php.title %></p>
-            <p>【<%= php.genre_i18n %>】</p>
-          </div>
+          <%= link_to "/texts/#{php.id}", class:"abc" do %>
+            <div class="card-header p-0">
+              <img class="card-img-top img-fluid" src="https://d5izmuz0mcjzz.cloudfront.net/texts/no_image.jpg">
+            </div>
+            <div class="card-body text-dark text-card-body">
+              <p class="card-text text-title"><%= php.title %></p>
+              <p>【<%= php.genre_i18n %>】</p>
+            </div>
+          <% end %>
         </div>
       </div>
     <% end %>
