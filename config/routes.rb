@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     passwords: "users/passwords"
   }
   root "pages#top"
+  get '/texts/php', to: 'texts#php'
+  get '/texts/:id', to: 'texts#php_show'
   resources :texts do
     resource :reads, only: [:create, :destroy]
   end

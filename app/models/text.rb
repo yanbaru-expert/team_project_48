@@ -1,4 +1,6 @@
 class Text < ApplicationRecord
+
+  PER = 9 
   has_many :reads, dependent: :destroy
   with_options presence: true do
     validates :genre
@@ -11,7 +13,7 @@ class Text < ApplicationRecord
   end
 
   scope :recent, -> { where(genre: ["basic", "git", "ruby", "rails"]) }
-  
+
   enum genre: {
     invisible: 0, # 非表示
     basic: 1,
@@ -30,4 +32,6 @@ class Text < ApplicationRecord
     talk: 14, # 全ての勉強会
     live: 15, # 勉強会
   }
+
+  scope :recent, -> { where(genre: ["basic", "git", "ruby", "rails"]).order(id: :asc) }
 end
