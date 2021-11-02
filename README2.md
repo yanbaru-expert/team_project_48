@@ -4,7 +4,7 @@
 ## Demo
 
 
-https://user-images.githubusercontent.com/75218115/132340683-35ce2c5b-04fb-4e6c-b452-651bafe67ffb.mov
+https://user-images.githubusercontent.com/75218115/139868650-363901fb-811d-46b1-af1f-5257731a0809.mov
 
 ## URL
 - https://team-project-48-2021-5-30.herokuapp.com/
@@ -17,12 +17,14 @@ https://user-images.githubusercontent.com/75218115/132340683-35ce2c5b-04fb-4e6c-
 - DB:PostgreSQL
 
 ## 機能一覧
-- アカウント登録機能(device)
-- アカウント削除機能(device)
+- アカウント登録機能(devise)
+- アカウント削除機能(devise)
 - ログイン機能
 - ゲストユーザーログイン機能
-- 教材検索機能(ransac)
+- 教材検索機能(ransack)
 - 教材の読破/視聴済みボタン(Ajax)
+
+
 - ページネーション機能(kaminari)
 - TOPページ戻る機能(jQuery,JavaScript)
 
